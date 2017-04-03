@@ -17,5 +17,7 @@ I advise to disable the avahi-daemon service after the initial setup (systemctl 
 To install the service:
 
 sudo cp avahiswitch.service /lib/systemd/system/
+
 sudo cp -f avahi-daemon.conf /etc/avahi/
+
 systemctl enable avahiswitch.service
