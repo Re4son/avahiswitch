@@ -11,3 +11,11 @@ Add a file called "avahi" in /boot will enable the avahi-daemon, which in turn m
 This is particularly useful when using ethernet gadget mode for the initial headless setup of a raspberry pi.
 
 I advise to disable the avahi-daemon service after the initial setup (systemctl disable avahi-daemon)
+
+
+
+To install the service:
+
+sudo cp avahiswitch.service /lib/systemd/system/
+sudo cp -f avahi-daemon.conf /etc/avahi/
+systemctl enable avahiswitch.service
